@@ -1,0 +1,20 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+      connection-timeout: 10000
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://ec2-63-33-239-176.eu-west-1.compute.amazonaws.com:5432/daf1qd1ib95qu9
+    driver-class-name: org.postgresql.Driver
+    username: pyiqsjakkijuho
+    password: 007a2f841cf28cd5a9b917c075e29369a3e53558790e75306b1ce563ff6a600d
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true

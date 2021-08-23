@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+      connection-timeout: 10000
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:grizzly
+    driver-class-name: org.h2.Driver
+    username: login
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
